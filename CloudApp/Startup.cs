@@ -44,6 +44,14 @@ namespace CloudApp
         {
             string connectionString = _configuration.GetConnectionString("ApplicationDBContext");
 
+            #region Docker Environment Variables
+                string server = _configuration["SQL_SERVER"];
+                string user = _configuration["SQL_USERNAME"];
+                string pass = _configuration["SQL_PASSWORD"];
+                string dbName = _configuration["SQL_DATABASE"];
+                connectionString = $"Server={server};Database={dbName};User={user};Password={pass};";
+            #endregion
+
             //services.AddEntityFrameworkSqlServer();
             //services.AddEntityFrameworkProxies();
             services.AddDbContextPool<AppDBContext>((serviceProvider, optionBuilder) =>
@@ -82,6 +90,14 @@ namespace CloudApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseCors(options =>
+            {
+                options.AllowAnyOrigin();
+                options.AllowAnyHeader();
+                options.AllowAnyMethod();
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

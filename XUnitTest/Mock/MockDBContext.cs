@@ -5,14 +5,14 @@ using System;
 
 namespace XUnitTest.Mock
 {
-    public class MockDBContext: AppDBContext
+    public class MockDBContext //: AppDBContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseInMemoryDatabase(Guid.NewGuid().ToString());
-            }
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseInMemoryDatabase(Guid.NewGuid().ToString());
+        //    }
+        //}
     }
 }

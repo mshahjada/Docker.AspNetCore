@@ -9,9 +9,9 @@ services:
       context: .
       dockerfile: CloudApp/Dockerfile
     ports:
-      - 5000
+      - 80
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:5000
+      - ASPNETCORE_URLS=http://+:80
     volumes:
-      - ~/.vsdbg:c:\remote_debugger:rw
+      - ~/.vsdbg:/remote_debugger:rw
