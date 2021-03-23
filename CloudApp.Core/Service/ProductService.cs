@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CloudApp.Model;
+using System.Linq;
+using Paging;
 
 namespace CloudApp.Core.Service
 {
@@ -65,7 +67,12 @@ namespace CloudApp.Core.Service
 
         public async Task<List<Product>> GetsAsync()
         {
+
+
             return await _context.Products.ToListAsync();
+
         }
+            
+
     }
 }

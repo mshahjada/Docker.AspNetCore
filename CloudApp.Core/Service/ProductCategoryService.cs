@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using CloudApp.Model;
+using Paging;
 
 namespace CloudApp.Core.Service
 {
@@ -64,6 +65,11 @@ namespace CloudApp.Core.Service
         public async Task<List<ProductCategory>> GetsAsync()
         {
             return await _context.ProductCategories.ToListAsync();
+        }
+
+        public async Task<PageList<ProductCategory>> GetsAsync(int page, int pageSize, string search)
+        {
+            return await _context.ProductCategories.GetPagedAsync(page, pageSize);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CloudApp.Model;
+using Paging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,5 +15,7 @@ namespace CloudApp.Core.Interface
         Task<ProductCategory> AddAsync(ProductCategory entity);
         Task<ProductCategory> EditAsync(int id, ProductCategory entity);
         Task DeleteAsync(int id);
+
+        Task<PageList<ProductCategory>> GetsAsync(int page, int pageSize, string search);
     }
 }

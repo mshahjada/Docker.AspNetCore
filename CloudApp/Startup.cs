@@ -44,13 +44,13 @@ namespace CloudApp
         {
             string connectionString = _configuration.GetConnectionString("ApplicationDBContext");
 
-            #region Docker Environment Variables
-                string server = _configuration["SQL_SERVER"];
-                string user = _configuration["SQL_USERNAME"];
-                string pass = _configuration["SQL_PASSWORD"];
-                string dbName = _configuration["SQL_DATABASE"];
-                connectionString = $"Server={server};Database={dbName};User={user};Password={pass};";
-            #endregion
+            //#region Docker Environment Variables
+            //    string server = _configuration["SQL_SERVER"];
+            //    string user = _configuration["SQL_USERNAME"];
+            //    string pass = _configuration["SQL_PASSWORD"];
+            //    string dbName = _configuration["SQL_DATABASE"];
+            //    connectionString = $"Server={server};Database={dbName};User={user};Password={pass};";
+            //#endregion
 
             //services.AddEntityFrameworkSqlServer();
             //services.AddEntityFrameworkProxies();

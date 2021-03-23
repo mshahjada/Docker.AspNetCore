@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudApp.Infra", "CloudApp.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest", "XUnitTest\XUnitTest.csproj", "{095EC1BF-3528-4B2E-9AC0-CC9C6CD35A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.Core", "CloudApp.Core\CloudApp.Core.csproj", "{5415BB93-4FD5-42B4-899A-220D47BAB547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudApp.Core", "CloudApp.Core\CloudApp.Core.csproj", "{5415BB93-4FD5-42B4-899A-220D47BAB547}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.Model", "CloudApp.Model\CloudApp.Model.csproj", "{E510A059-CD60-4B9A-9DDC-962407463B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudApp.Model", "CloudApp.Model\CloudApp.Model.csproj", "{E510A059-CD60-4B9A-9DDC-962407463B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paging", "Paging\Paging.csproj", "{060AAF88-8E96-4571-A6DD-EE981C9C316C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E510A059-CD60-4B9A-9DDC-962407463B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E510A059-CD60-4B9A-9DDC-962407463B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E510A059-CD60-4B9A-9DDC-962407463B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{060AAF88-8E96-4571-A6DD-EE981C9C316C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{060AAF88-8E96-4571-A6DD-EE981C9C316C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{060AAF88-8E96-4571-A6DD-EE981C9C316C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{060AAF88-8E96-4571-A6DD-EE981C9C316C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

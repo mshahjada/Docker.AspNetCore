@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Caching.Memory;
 using CloudApp.Core.Interface;
 using CloudApp.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CloudApp.Controllers
 {
@@ -101,6 +102,15 @@ namespace CloudApp.Controllers
 
 
             return Ok(res);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("category/getpaged/{page:int}/{pageSize:int}/{searchParam}")]
+        public async Task<IActionResult> GetCategoryPaged(int page, int pageSize, string searchParam)
+        {
+
+            return Ok(await _productCategory.GetsAsync(page, pageSize, searchParam));
         }
     }
 
