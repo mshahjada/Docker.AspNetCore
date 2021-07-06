@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudApp.Core", "CloudApp.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudApp.Model", "CloudApp.Model\CloudApp.Model.csproj", "{E510A059-CD60-4B9A-9DDC-962407463B04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paging", "Paging\Paging.csproj", "{060AAF88-8E96-4571-A6DD-EE981C9C316C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paging", "Paging\Paging.csproj", "{060AAF88-8E96-4571-A6DD-EE981C9C316C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workers", "workers", "{58E493B8-8C2E-4D80-A1D2-F890C4E86087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker.CronJobs", "Worker.CronJobs\Worker.CronJobs.csproj", "{EC7A9E5A-AA75-4F38-97C8-F8B036A1233E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +49,16 @@ Global
 		{060AAF88-8E96-4571-A6DD-EE981C9C316C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{060AAF88-8E96-4571-A6DD-EE981C9C316C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{060AAF88-8E96-4571-A6DD-EE981C9C316C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7A9E5A-AA75-4F38-97C8-F8B036A1233E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7A9E5A-AA75-4F38-97C8-F8B036A1233E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7A9E5A-AA75-4F38-97C8-F8B036A1233E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7A9E5A-AA75-4F38-97C8-F8B036A1233E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC7A9E5A-AA75-4F38-97C8-F8B036A1233E} = {58E493B8-8C2E-4D80-A1D2-F890C4E86087}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3AFE1E08-4804-43AD-800E-189A9A4EC091}

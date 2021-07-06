@@ -9,6 +9,7 @@ COPY ["CloudApp/CloudApp.csproj", "CloudApp/"]
 COPY ["CloudApp.Core/CloudApp.Core.csproj", "CloudApp.Core/"]
 COPY ["CloudApp.Infra/CloudApp.Infra.csproj", "CloudApp.Infra/"]
 COPY ["CloudApp.Model/CloudApp.Model.csproj", "CloudApp.Model/"]
+COPY ["Worker.CronJobs/Worker.CronJobs.csproj", "Worker.CronJobs/"]
 RUN dotnet restore "CloudApp\CloudApp.csproj"
 COPY . .
 WORKDIR "/src/CloudApp"

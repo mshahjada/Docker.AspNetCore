@@ -26,6 +26,13 @@
   <ItemGroup>
     <ProjectReference Include="..\CloudApp.Core\CloudApp.Core.csproj" />
     <ProjectReference Include="..\CloudApp.Model\CloudApp.Model.csproj" />
+    <ProjectReference Include="..\Worker.CronJobs\Worker.CronJobs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="shell.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 

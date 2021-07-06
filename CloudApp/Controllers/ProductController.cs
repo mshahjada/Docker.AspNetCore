@@ -15,6 +15,7 @@ namespace CloudApp.Controllers
 {
     [Route("api/product")]
     [ApiController]
+    [AllowAnonymous]
     //[ServiceFilter(typeof(SampleActionFilter))]
     public class ProductController : ControllerBase
     {
@@ -111,6 +112,15 @@ namespace CloudApp.Controllers
         {
 
             return Ok(await _productCategory.GetsAsync(page, pageSize, searchParam));
+        }
+
+
+        [HttpPut]
+        [Route("edit/{id:long}")]
+        public async Task<IActionResult> eidt(long id, Product product)
+        {
+
+            return Ok("Success");
         }
     }
 
